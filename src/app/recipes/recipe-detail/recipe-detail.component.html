@@ -1,16 +1,23 @@
 <div class="row">
   <div class="col-xs-12">
-    <img [src]=recipe.imagePath alt="" class="img-responsive" style="max-height: 200px; max-width: 200px;" />
+    <img
+      [src]="recipe.imagePath"
+      alt=""
+      class="img-responsive"
+      style="max-height: 200px; max-width: 200px;"
+    />
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-     <h1>{{recipe.name}}</h1> 
+    <h1>{{recipe.name}}</h1>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <div class="btn-group">
+    <!-- Adding the ownmade 'appDropdown' directive because allows to add the open class value 
+      and remove it by clicking the button -->
+    <div class="btn-group" appDropdown>
       <button type="button" class="btn btn-primary dropdown-toggle">
         Manage recipe
         <span class="caret"></span>
@@ -25,11 +32,11 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-     {{recipe.description}} 
+    {{recipe.description}}
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    Ingredients: 
+    Ingredients:
   </div>
 </div>
